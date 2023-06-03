@@ -11,7 +11,7 @@ export const AllChampionsAPI = () => {
 			try {
 				setError(null);
 				const res = await fetch(
-					"http://ddragon.leagueoflegends.com/cdn/13.10.1/data/en_US/champion.json?fbclid=IwAR2uigR4_Y3l3x1wHR_0-hQvF9Zd9shgJsTMyVzDMQ-0aRjVxmUpA7mOt8s"
+					"http://ddragon.leagueoflegends.com/cdn/13.10.1/data/pl_PL/champion.json?fbclid=IwAR2uigR4_Y3l3x1wHR_0-hQvF9Zd9shgJsTMyVzDMQ-0aRjVxmUpA7mOt8s"
 				);
 				const data = await res.json();
 

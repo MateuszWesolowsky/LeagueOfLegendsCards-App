@@ -1,0 +1,120 @@
+.Nav__container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.9rem;
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 8rem;
+	min-height: 50px;
+	height: 7vh;
+	padding: 0rem 2rem;
+	color: #ffffe6;
+	background-color: transparent;
+	background-image: linear-gradient(180deg, grey, grey),
+		linear-gradient(225deg, grey, grey), linear-gradient(0deg, grey, grey),
+		linear-gradient(90deg, grey, grey),
+		linear-gradient(
+			135deg,
+			transparent 9px,
+			grey 10px,
+			grey 12px,
+			transparent 12px
+		);
+	background-position: top right, top right, bottom left, bottom left, top left;
+	background-size: calc(100% - 15px) 2px, 2px 100%, 100% 2px,
+		2px calc(100% - 15px), 15px 15px;
+	background-repeat: no-repeat;
+}
+
+.Nav__Bar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+.Nav__Bar li {
+	list-style: none;
+	padding: 2px;
+	margin-right: 20px;
+	cursor: pointer;
+	position: relative;
+}
+
+.Nav__Bar li::after {
+	content: "";
+	position: absolute;
+	bottom: -90%;
+	left: 50%;
+	right: 50%;
+	background-color: #FFFFCB;
+	width: 0%;
+	height: 4px;
+	transition: 0.5s;
+}
+.Nav__Bar li:hover::after {
+	width: 40%;
+	left: 30%;
+	right: 30%;
+}
+.Champions__list {
+	display: flex;
+	position: relative;
+	align-items: center;
+	gap: 1rem;
+	width: 15%;
+	margin-right: 3rem;
+	cursor: pointer;
+	height: 100%;
+}
+
+.Champions__list::after {
+	content: "";
+	position: absolute;
+	bottom: 25%;
+	top: 25%;
+	right: -20%;
+	background-color: #FFFFCB;
+	width: 2px;
+	height: 50%;
+	transition: 0.3s;
+}
+
+.Champions__list:hover::after {
+	height: 80%;
+	top: 10%;
+	bottom: 10%;
+}
+
+.Level__Dif {
+	display: flex;
+	width: 15%;
+	align-items: center;
+	height: 100%;
+	text-align: center;
+	position: relative;
+}
+
+.Level__Dif::after {
+	content: "";
+	position: absolute;
+	bottom: 25%;
+	top: 25%;
+	left: -20%;
+	background-color: #FFFFCB;
+	width: 2px;
+	height: 50%;
+	transition: 0.3s;
+}
+.Level__Dif:hover::after {
+	height: 80%;
+	top: 10%;
+	bottom: 10%;
+}
+
+.Search__icon {
+	height: 1.5rem;
+	width: 1.5rem;
+	margin-right: 10px;
+}

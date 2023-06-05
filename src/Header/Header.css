@@ -1,5 +1,6 @@
 .Header__img {
 	height: 50vh;
+	/* min-height: 30vh; */
 	background-image: url(/src/img/logo-1200-589b3ef693ce8a750fa4b4.png),
 		url("https://oyster.ignimgs.com/wordpress/stg.ign.com/2014/02/LoL_012714_1600.jpg");
 	background-repeat: no-repeat;
@@ -23,7 +24,17 @@
 
 .Title__Description {
 	font-size: 1rem;
-    line-height: 1.7rem;
+	line-height: 1.7rem;
 	max-width: 500px;
 	margin: 0 auto;
 }
+
+/* @media only screen and (max-width: 600px) {
+
+	.Header__title h1 {
+		font-size: 0.5rem;
+	}
+	.Header__title h1 span {
+		font-size: 2rem;
+	}
+} */

@@ -36,5 +36,5 @@ export const AllChampionsAPI = () => {
 		return <Spiner />;
 	}
 
-	return <SingleChampionAPI names={championsInfo.championID} />;
+	return <SingleChampionAPI championNames={championsInfo.championID} />;
 };

@@ -1,0 +1,10 @@
+ul.cards {
+    margin-top: 3rem;
+	display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+}
+li.card {
+	width: 21%;
+    list-style: none;
+}

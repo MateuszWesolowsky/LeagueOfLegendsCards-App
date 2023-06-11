@@ -17,11 +17,6 @@ export const AllChampionsAPI = () => {
 
 				setChampionsInfo({
 					championID: Object.values(data.data).map((elemet) => elemet.id),
-					// title: Object.values(data.data)
-					// 	.map((elemet) => elemet.title)
-					// 	.join(", "),
-					// stats: Object.values(data.data).map((elemet) => elemet.stats),
-					// picture: Object.values(data.data).map((elemet) => elemet.image.full),
 				});
 			} catch (e) {
 				setError("Loading data error..");

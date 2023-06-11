@@ -3,16 +3,20 @@ import "./App.css";
 import { AllChampionsAPI } from "./LeagueAPI/AllChampionsAPI";
 import { Header } from "./Header/Header";
 import { Navigation } from "./Navigation/Navigation";
-import { ChampionCards } from "./ChampionCards/ChampionCards";
+import { Route, Routes } from "react-router-dom";
+import { ChampionView } from "./ChampionView/ChampionView";
 
 export const App = () => {
 	return (
-		<div className='App'>
+		<>
 			<Header />
 			<Navigation />
-			<ChampionCards />
-			<AllChampionsAPI/>
-		</div>
+			<AllChampionsAPI />
+			<Routes>
+				<Route path={`/$`} element={<ChampionView />} />
+			</Routes>
+
+		</>
 	);
 };
 

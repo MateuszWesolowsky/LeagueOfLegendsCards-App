@@ -1,7 +1,6 @@
 import React from "react";
 import "./ChampionCards.css";
-import { Link, Route, Routes } from "react-router-dom";
-import { ChampionView } from "../ChampionView/ChampionView";
+import { Link } from "react-router-dom";
 
 export const ChampionCards = ({ championsData }) => {
 	return (
@@ -10,8 +9,8 @@ export const ChampionCards = ({ championsData }) => {
 				{championsData.map((card) => {
 					return (
 						<li key={card.id} className='card'>
-							<div className='cardana'>
-								<Link to={`/${card.id.toLowerCase()}`}>
+							<div className='Champ__img__container'>
+								<Link to={`/${card.id}`}>
 									<img
 										src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${card.id}_0.jpg`}
 										alt={`Champion picture - ${card.name}`}

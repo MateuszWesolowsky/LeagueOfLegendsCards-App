@@ -1,0 +1,43 @@
+.Header__video__container {
+	height: 100vh;
+}
+
+.Header__video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.Header__video__container::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 1;
+}
+
+.Game__description {
+	height: 100vh;
+	position: absolute;
+	top: 40%;
+	left: calc(50% - 508px);
+	padding: 2rem;
+	text-align: center;
+	z-index: 23;
+}
+.Game__description h2 {
+	font-size: 3.4rem;
+	letter-spacing: 3px;
+	font-style: italic;
+}
+.Game__description__span {
+	display: block;
+	width: 600px;
+	margin: 0 auto;
+	font-size: 1.1rem;
+}

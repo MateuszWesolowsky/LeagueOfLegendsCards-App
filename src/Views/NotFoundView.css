@@ -11,6 +11,6 @@
 .NotFound__Container p {
 	font-size: 25px;
 }
-.NotFound__Container a {
-	color: rgb(81, 50, 205);
+.NotFound__Container .Home__link {
+	color: rgb(255, 0, 0);
 }

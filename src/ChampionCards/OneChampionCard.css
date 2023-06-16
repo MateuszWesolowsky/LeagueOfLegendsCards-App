@@ -1,4 +1,44 @@
-.Champion__container h2{
-    font-size: 50px;
-    text-align: center;
+.Champion__container {
+	position: relative;
+}
+
+.Img__container {
+	position: relative;
+}
+
+.Img__container .Blur__img {
+	filter: blur(8px) brightness(0.2);
+	width: 100%;
+}
+
+.Img__container .Main__img {
+	position: absolute;
+	top: 42%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 64%;
+}
+.Title__container {
+    padding: 1rem;
+	position: absolute;
+	top: 65%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    justify-content: center;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-style: italic;
+    letter-spacing: 2px;
+}
+.Title__container span {
+	font-size: 1.6rem;
+
+}
+.Title__container h2 {
+	font-size: 7.5rem;
+	padding: 0 1rem;
+    letter-spacing: 6px;
 }

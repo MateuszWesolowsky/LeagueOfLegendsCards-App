@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { Spiner } from "../Spiner/Spiner";
+import { Spinner } from "../Spinner/Spinner";
 import { SingleChampionAPI } from "./SingleChampionAPI";
 
 export const AllChampionsAPI = () => {
 	const [championsInfo, setChampionsInfo] = useState(null);
 	const [error, setError] = useState(null);
 
+	const API_URL =
+		"http://ddragon.leagueoflegends.com/cdn/13.10.1/data/pl_PL/champion.json?fbclid=IwAR2uigR4_Y3l3x1wHR_0-hQvF9Zd9shgJsTMyVzDMQ-0aRjVxmUpA7mOt8s";
+
 	useEffect(() => {
 		(async () => {
 			try {
 				setError(null);
-				const res = await fetch(
-					"http://ddragon.leagueoflegends.com/cdn/13.10.1/data/pl_PL/champion.json?fbclid=IwAR2uigR4_Y3l3x1wHR_0-hQvF9Zd9shgJsTMyVzDMQ-0aRjVxmUpA7mOt8s"
-				);
+				const res = await fetch(API_URL);
 				const data = await res.json();
 
 				setChampionsInfo({
@@ -28,7 +29,7 @@ export const AllChampionsAPI = () => {
 	}
 
 	if (championsInfo === null) {
-		return <Spiner />;
+		return;
 	}
 
 	return <SingleChampionAPI championNames={championsInfo.championID} />;

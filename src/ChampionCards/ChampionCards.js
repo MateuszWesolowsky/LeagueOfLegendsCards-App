@@ -16,8 +16,8 @@ export const ChampionCards = ({ championsData }) => {
 											src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${card.id}_0.jpg`}
 											alt={`Champion picture - ${card.name}`}
 										/>
-									
-									<span>{card.name}</span>
+
+										<span>{card.name}</span>
 									</Link>
 								</div>
 							</div>

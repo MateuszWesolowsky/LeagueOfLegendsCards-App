@@ -1,21 +1,18 @@
 import React from "react";
 import "./App.css";
-import { AllChampionsAPI } from "./LeagueAPI/AllChampionsAPI";
-import { Header } from "./Header/Header";
-import { Navigation } from "./Navigation/Navigation";
 import { Route, Routes } from "react-router-dom";
-import { ChampionView } from "./ChampionView/ChampionView";
+import { SingleChampionView } from "./Views/SingleChampionView";
+import { NotFoundView } from "./Views/NotFoundView";
+import { MainView } from "./Views/MainView";
 
 export const App = () => {
 	return (
 		<>
-			<Header />
-			<Navigation />
-			<AllChampionsAPI />
 			<Routes>
-				<Route path={`/$`} element={<ChampionView />} />
+				<Route path='/' element={<MainView />} />
+				<Route path={`/:championId`} element={<SingleChampionView />} />
+				<Route path='*' element={<NotFoundView />} />
 			</Routes>
-
 		</>
 	);
 };

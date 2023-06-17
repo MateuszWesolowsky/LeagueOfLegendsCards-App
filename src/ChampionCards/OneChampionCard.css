@@ -1,5 +1,6 @@
 .Champion__container {
 	position: relative;
+	text-transform: uppercase;
 }
 
 .Img__container {
@@ -18,27 +19,75 @@
 	transform: translate(-50%, -50%);
 	width: 64%;
 }
-.Title__container {
-    padding: 1rem;
+.Champion__title__container {
+	padding: 1rem;
 	position: absolute;
-	top: 65%;
+	top: 85%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-    justify-content: center;
+	justify-content: center;
 	font-weight: bold;
-	text-transform: uppercase;
 	font-style: italic;
-    letter-spacing: 2px;
+	letter-spacing: 2px;
 }
-.Title__container span {
+.Champion__title__container span {
 	font-size: 1.6rem;
-
 }
-.Title__container h2 {
+.Champion__title__container h2 {
 	font-size: 7.5rem;
 	padding: 0 1rem;
-    letter-spacing: 6px;
+	letter-spacing: 6px;
+}
+.Champion__description__container {
+	margin: 0 auto;
+	font-size: 0.8rem;
+	width: 70%;
+	padding: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.Champion__description__container > div {
+	width: 35%;
+}
+
+.Left__info__container {
+	padding: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.Right__info__container {
+	position: relative;
+	text-transform: none;
+	font-size: 1rem;
+}
+.Right__info__container::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -50%;
+	background-color: #ffffcb;
+	width: 1px;
+	height: 100%;
+}
+
+.Role__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2rem;
+}
+.Difficulty__level__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2rem;
+}
+.Difficulty__level__container span,
+.Role__container span {
+	padding: 0.4rem;
 }

@@ -1,0 +1,17 @@
+.Spells {
+    margin-top: 3rem;
+}
+
+.Spells__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 50vh;
+} 
+
+.Spells__h2 {
+    font-size: 4rem;
+}
+.Description__span {
+    text-transform: none;
+}

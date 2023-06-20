@@ -5,7 +5,7 @@
 	font-size: 0.9rem;
 	width: 80%;
 	margin: 0 auto;
-	margin-top: 8rem;
+	margin-top: 4rem;
 	height: 7vh;
 	min-height: 70px;
 	padding: 0rem 2rem;
@@ -48,7 +48,7 @@
 	bottom: -90%;
 	left: 50%;
 	right: 50%;
-	background-color: #FFFFCB;
+	background-color: #ffffcb;
 	width: 0%;
 	height: 4px;
 	transition: 0.5s;
@@ -75,7 +75,7 @@
 	bottom: 25%;
 	top: 25%;
 	right: -20%;
-	background-color: #FFFFCB;
+	background-color: #ffffcb;
 	width: 2px;
 	height: 50%;
 	transition: 0.3s;
@@ -102,7 +102,7 @@
 	bottom: 25%;
 	top: 25%;
 	left: -20%;
-	background-color: #FFFFCB;
+	background-color: #ffffcb;
 	width: 2px;
 	height: 50%;
 	transition: 0.3s;

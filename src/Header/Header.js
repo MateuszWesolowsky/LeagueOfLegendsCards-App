@@ -6,10 +6,9 @@ export const Header = () => {
 
 	const scrollToSection = () => {
 		if (sectionRef.current) {
-		  sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+			sectionRef.current.scrollIntoView({ behavior: "smooth" });
 		}
-	  };
-
+	};
 
 	return (
 		<header>
@@ -32,13 +31,13 @@ export const Header = () => {
 						zmierzając po zwycięstwo.
 					</span>
 				</div>
-				<div className="Animated__button">
-				<button onClick={scrollToSection}>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					Poznaj bohaterów
+				<div className='Animated__button'>
+					<button onClick={scrollToSection}>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						Poznaj bohaterów
 					</button>
 				</div>
 			</div>

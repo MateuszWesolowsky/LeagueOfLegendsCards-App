@@ -2,41 +2,55 @@ import React, { useState } from "react";
 import "./Spells.css";
 
 export const Spells = ({ singleChampionInfo }) => {
-	const [isActive, setIsActive] = useState(false);
+	const [activeSpellName, setactiveSpellName] = useState(
+		singleChampionInfo.passive.name
+	);
 
-	// const spellsContainer = singleChampionInfo.map(spell =>
-	// 	(
-	// 		<>
-
-	// 		</>
-	// 	)
-	// );
+	const chosedSpell = (name) => {
+		setactiveSpellName(name);
+	};
 
 	return (
-		<div className='Spells'>
-			<div className='Spells__container'>
-				<h2 className='Spells__h2'>Umiejętności</h2>
-				<div className='Spells'>
-					<div className='Spells__passive'>
+		<div className='Spells__container'>
+			<h2 className='Spells__h2'>Umiejętności</h2>
+
+			<div className='Spells'>
+				<div className='Spells__img__container'>
+					<img
+						onClick={() => chosedSpell(singleChampionInfo.passive.name)}
+						src={`https://ddragon.leagueoflegends.com/cdn/13.12.1/img/passive/${singleChampionInfo.passive.image.full}`}
+						alt={`Passive spell - ${singleChampionInfo.name}`}
+					/>
+					{singleChampionInfo.spells.map((spell) => (
 						<img
-							src={`https://ddragon.leagueoflegends.com/cdn/13.12.1/img/passive/${singleChampionInfo.passive.image.full}`}
+							onClick={() => chosedSpell(spell.name)}
+							key={spell.id}
+							src={`https://ddragon.leagueoflegends.com/cdn/13.12.1/img/spell/${spell.id}.png`}
 							alt={`Passive spell - ${singleChampionInfo.name}`}
 						/>
-						<div className='Passive__description'>
-							<span>Umiejętoność Bierna</span>
-							<span className='Name__span'>
-								{singleChampionInfo.passive.name}
-							</span>
-							<span className='Description__span'>
-								{singleChampionInfo.passive.description
+					))}
+				</div>
+				<div className='Spells__description__container'>
+					<span className='Spells__names'>
+						{activeSpellName === singleChampionInfo.passive.name
+							? singleChampionInfo.passive.name
+							: singleChampionInfo.spells.find(
+									(spellName) => spellName.name === activeSpellName
+							  ).name}
+					</span>
+					<span className='Spells__description'>
+						{activeSpellName === singleChampionInfo.passive.name
+							? singleChampionInfo.passive.description
 									.replaceAll("<", "")
 									.replaceAll(">", "")
+									.replaceAll("/", "")
+							: singleChampionInfo.spells
+									.find((spellName) => spellName.name === activeSpellName)
+									.description.replaceAll("<", "")
+									.replaceAll(">", "")
 									.replaceAll("/", "")}
-							</span>
-						</div>
-					</div>
+					</span>
 				</div>
-				<div className='Spells__description'></div>
 			</div>
 		</div>
 	);

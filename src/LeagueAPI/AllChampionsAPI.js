@@ -7,7 +7,7 @@ export const AllChampionsAPI = () => {
 	const [error, setError] = useState(null);
 
 	const API_URL =
-		"http://ddragon.leagueoflegends.com/cdn/13.10.1/data/pl_PL/champion.json?fbclid=IwAR2uigR4_Y3l3x1wHR_0-hQvF9Zd9shgJsTMyVzDMQ-0aRjVxmUpA7mOt8s";
+		"https://ddragon.leagueoflegends.com/cdn/13.10.1/data/pl_PL/champion.json?fbclid=IwAR2uigR4_Y3l3x1wHR_0-hQvF9Zd9shgJsTMyVzDMQ-0aRjVxmUpA7mOt8s";
 
 	useEffect(() => {
 		(async () => {

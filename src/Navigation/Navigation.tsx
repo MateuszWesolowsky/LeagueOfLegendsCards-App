@@ -1,6 +1,7 @@
 import React from "react";
 import "./Nav.css";
-export const Navigation = () => {
+
+export const Navigation = (): JSX.Element => {
 	return (
 		<div className='Nav__container'>
 			<label className='Champions__list'>
@@ -19,7 +20,6 @@ export const Navigation = () => {
 				</svg>
 				Szukaj
 			</label>
-
 			<ul className='Nav__Bar'>
 				<li>Wszystkie</li>
 				<li>Zabójcy</li>

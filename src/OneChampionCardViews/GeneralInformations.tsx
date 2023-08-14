@@ -1,10 +1,24 @@
 import React, { useState } from "react";
 import "./GeneralInformations.css";
 
-export const GeneralInformations = ({ singleChampionInfo }) => {
-	const [visibleText, setVisibleText] = useState(true);
+interface Props {
+	singleChampionInfo:{
+		id:string,
+		title:string,
+		name:string,
+		tags:string[],
+		info:{
+			difficulty:number
+		},
+		blurb:string,
+		lore:string,
+	}
+}
 
-	const checkMore = () => {
+export const GeneralInformations = ({ singleChampionInfo }:Props): JSX.Element => {
+	const [visibleText, setVisibleText] = useState<boolean>(true);
+
+	const checkMore = (): void => {
 		setVisibleText(false);
 	};
 

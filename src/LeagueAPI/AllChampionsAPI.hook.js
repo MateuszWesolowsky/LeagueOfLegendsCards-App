@@ -1,33 +1,28 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-export const useFetchChampions = () => {
-	const [championsInfo, setChampionsInfo] = useState(null);
-	const [error, setError] = useState(null);
+export const useFetchChampions = (link) => {
+	const [championsInfo, setChampionsInfo] = useState([]);
+	const [error, setError] = useState("");
 	const [isLoading, setIsLoading] = useState(false);
-
-	const API_URL =
-		"https://ddragon.leagueoflegends.com/cdn/13.10.1/data/pl_PL/champion.json?fbclid=IwAR2uigR4_Y3l3x1wHR_0-hQvF9Zd9shgJsTMyVzDMQ-0aRjVxmUpA7mOt8s";
 
 	useEffect(() => {
 		(async () => {
-			setIsLoading(true);
 			try {
-				setError(null);
-				const res = await fetch(API_URL);
+				setIsLoading(true);
+				setError("");
+				const res = await fetch(link);
 				const data = await res.json();
-				setChampionsInfo({
-					championID: Object.values(data.data).map((elemet) => elemet.id),
-				});
-				setIsLoading(false);
+				setChampionsInfo(Object.values(data.data));
 			} catch (e) {
 				setError("Loading data error..");
+			} finally {
 				setIsLoading(false);
 			}
 		})();
-	}, []);
-
+	}, [link]);
 	return {
 		championsInfo,
+		setChampionsInfo,
 		error,
 		isLoading,
 	};

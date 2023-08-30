@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Spinner } from "../Spinner/Spinner";
 import { ChampionCards } from "../ChampionCards/ChampionCards";
 
-export const SingleChampionAPI = (props) => {
+export const SingleChampionAPI = ({championsID}) => {
 	const [data, setData] = useState([]);
 	const [error, setError] = useState(null);
 
@@ -12,9 +12,9 @@ export const SingleChampionAPI = (props) => {
 				setError(null);
 				const championData = [];
 				// Replaced the forEach loop with a for of loop to use await inside.
-				for (const championName of props.championNames) {
+				for (const championID of championsID) {
 					const res = await fetch(
-						`http://ddragon.leagueoflegends.com/cdn/13.9.1/data/pl_PL/champion/${championName}.json`
+						`http://ddragon.leagueoflegends.com/cdn/13.9.1/data/pl_PL/champion/${championID}.json`
 					);
 					const resData = await res.json();
 
@@ -28,7 +28,7 @@ export const SingleChampionAPI = (props) => {
 		};
 
 		fetchData();
-	}, [props.championNames]);
+	}, [championsID]);
 
 	if (error) {
 		return <p>{error}</p>;

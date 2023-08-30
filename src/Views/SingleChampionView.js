@@ -30,7 +30,7 @@ export const SingleChampionView = () => {
 	}
 
 	if (championInfo === null) {
-		return <Spinner />;
+		return <Spinner className={`loader`}/>
 	}
 
 	return <OneChampionCard singleChampionInfo={championInfo} />;

@@ -1,20 +1,14 @@
 import React from "react";
 import "./Nav.css";
+import { data } from "./data";
 
-const data = [
-	"Wszystkie",
-	"Zabójcy",
-	"Wojownicy",
-	"Magowie",
-	"Strzelcy",
-	"Wspierający",
-	"Obrońcy",
-];
+// const data = ["Wszystkie", "Zabójcy", "Wojownicy", "Magowie", "Strzelcy", "Wspierający", "Obrońcy"]
+
 interface Props {
-	onSelectCategory(el:string):string,
+	onSelectCategory(el: string): string;
 }
 
-export const Navigation = ({onSelectCategory}:Props): JSX.Element => {
+export const Navigation = ({ onSelectCategory }: Props): JSX.Element => {
 	return (
 		<div className='Nav__container'>
 			<label className='Champions__list'>
@@ -34,11 +28,15 @@ export const Navigation = ({onSelectCategory}:Props): JSX.Element => {
 				Szukaj
 			</label>
 			<ul className='Nav__Bar'>
-				{data.map((el, i) => (
-					<li onClick={() => onSelectCategory(el)} key={i}>{el}</li>
+				{data.map((el) => (
+					<li onClick={() => onSelectCategory(el.key)} key={el.key}>
+						{el.name}
+					</li>
 				))}
 			</ul>
 			<div className='Level__Dif'>Wszystkie poziomy trudości</div>
 		</div>
 	);
 };
+
+

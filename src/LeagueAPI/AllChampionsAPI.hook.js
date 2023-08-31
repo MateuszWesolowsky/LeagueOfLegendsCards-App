@@ -22,7 +22,6 @@ export const useFetchChampions = (link) => {
 	}, [link]);
 	return {
 		championsInfo,
-		setChampionsInfo,
 		error,
 		isLoading,
 	};

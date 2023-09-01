@@ -17,7 +17,7 @@ export const data = [
 	},
 	{
 		name: "Strzelcy",
-		key: "Marksmen",
+		key: "Marksman",
 	},
 	{
 		name: "Wspierający",

@@ -2,7 +2,7 @@ import { Spinner } from "../Spinner/Spinner";
 import { Link } from "react-router-dom";
 import "../ChampionCards/ChampionCards.css";
 
-export const AllChampionsAPI = ({ championsInfo, error, isLoading }) => {
+export const AllChampionsAPI = ({ championsInfo, error, isLoading, query }) => {
 	if (error) {
 		return <p>{error}</p>;
 	}
@@ -13,7 +13,8 @@ export const AllChampionsAPI = ({ championsInfo, error, isLoading }) => {
 	return (
 		<div className='Champion__cards__container'>
 			<ul className='Cards'>
-				{championsInfo.map((card) => {
+				{championsInfo.length === 0 ? <p className="notFound">Champion {query} not found...</p> : 
+				championsInfo.map((card) => {
 					return (
 						<li key={card.id} className='One__card'>
 							<div className='Champ__img__container'>

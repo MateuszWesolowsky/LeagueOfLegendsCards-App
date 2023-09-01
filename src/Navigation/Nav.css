@@ -1,4 +1,4 @@
-.Nav__container {
+.nav__container {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -27,14 +27,14 @@
 	background-repeat: no-repeat;
 }
 
-.Nav__Bar {
+.nav__bar {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
 	height: 100%;
 }
-.Nav__Bar li {
+.nav__bar li {
 	list-style: none;
 	padding: 2px;
 	margin-right: 20px;
@@ -42,7 +42,7 @@
 	position: relative;
 }
 
-.Nav__Bar li::after {
+.nav__bar li::after {
 	content: "";
 	position: absolute;
 	bottom: -90%;
@@ -53,12 +53,12 @@
 	height: 4px;
 	transition: 0.5s;
 }
-.Nav__Bar li:hover::after {
+.nav__bar li:hover::after {
 	width: 40%;
 	left: 30%;
 	right: 30%;
 }
-.Champions__list {
+.champions__list {
 	display: flex;
 	position: relative;
 	align-items: center;
@@ -68,8 +68,13 @@
 	cursor: pointer;
 	height: 100%;
 }
+.champions__list input {
+	background-color: inherit;
+	border: none;
+	color: wheat;
+}
 
-.Champions__list::after {
+.champions__list::after {
 	content: "";
 	position: absolute;
 	bottom: 25%;
@@ -81,13 +86,13 @@
 	transition: 0.3s;
 }
 
-.Champions__list:hover::after {
+.champions__list:hover::after {
 	height: 80%;
 	top: 10%;
 	bottom: 10%;
 }
 
-.Level__Dif {
+.level__dif {
 	display: flex;
 	width: 15%;
 	align-items: center;
@@ -96,7 +101,7 @@
 	position: relative;
 }
 
-.Level__Dif::after {
+.level__dif::after {
 	content: "";
 	position: absolute;
 	bottom: 25%;
@@ -107,13 +112,13 @@
 	height: 50%;
 	transition: 0.3s;
 }
-.Level__Dif:hover::after {
+.level__dif:hover::after {
 	height: 80%;
 	top: 10%;
 	bottom: 10%;
 }
 
-.Search__icon {
+.search__icon {
 	height: 1.5rem;
 	width: 1.5rem;
 	margin-right: 10px;

@@ -26,6 +26,10 @@
 .OneChamp__card a img {
 	width: 100%;
 }
+.notFound {
+	font-size: 3rem;
+	padding: 3rem;
+}
 
 .OneChamp__card {
 	position: relative;

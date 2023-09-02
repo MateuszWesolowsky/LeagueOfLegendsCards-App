@@ -1,0 +1,42 @@
+.Spells__container {
+	margin-top: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 50vh;
+}
+
+.Spells__h2 {
+	font-size: 4rem;
+}
+
+.Spells__img__container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+.Spells__img__container img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.Spells__img__container img:hover {
+    transform: translateY(-10%);
+}
+
+.Spells__description__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 60%;
+}
+.Spells__names {
+    font-size: 2rem;
+}
+.Spells__description {
+    padding: 2rem;
+    text-transform: none;
+    font-size: 1.3rem;
+    text-align: center;
+}

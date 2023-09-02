@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import { SingleChampionView } from "./Views/SingleChampionView";
-import { NotFoundView } from "./Views/NotFoundView";
-import { MainView } from "./Views/MainView";
+import { SingleChampionView } from "./Components/Views/SingleChampionView";
+import { NotFoundView } from "./Components/Views/NotFoundView";
+import { MainView } from "./Components/Views/MainView";
 
 export const App = () => {
 	return (

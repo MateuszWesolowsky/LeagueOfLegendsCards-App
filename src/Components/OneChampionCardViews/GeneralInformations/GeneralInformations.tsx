@@ -1,37 +1,47 @@
 import React, { useState } from "react";
 import "./GeneralInformations.css";
+import { Link } from "react-router-dom";
 
 interface Props {
-	singleChampionInfo:{
-		id:string,
-		title:string,
-		name:string,
-		tags:string[],
-		info:{
-			difficulty:number
-		},
-		blurb:string,
-		lore:string,
-	}
+	singleChampionInfo: {
+		id: string;
+		title: string;
+		name: string;
+		tags: string[];
+		info: {
+			difficulty: number;
+		};
+		blurb: string;
+		lore: string;
+	};
 }
 
-export const GeneralInformations = ({ singleChampionInfo }:Props): JSX.Element => {
+export const GeneralInformations = ({
+	singleChampionInfo,
+}: Props): JSX.Element => {
 	const [visibleText, setVisibleText] = useState<boolean>(true);
-
+console.log(singleChampionInfo)
 	const checkMore = (): void => {
 		setVisibleText(false);
 	};
 
 	return (
-		<div className='General__informations'>
-			<div className='Img__container'>
+		<>
+			<div className='imgs-container'>
+				<Link className='back-btn' to={`/`}>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					Lista Bohaterów
+				</Link>
 				<img
-					className='Blur__img'
+					className='blur-img'
 					src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${singleChampionInfo.id}_0.jpg`}
 					alt={`Champion - ${singleChampionInfo.id}`}
 				/>
 				<img
-					className='Main__img'
+					className='main-img'
 					src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${singleChampionInfo.id}_0.jpg`}
 					alt={`Champion - ${singleChampionInfo.id}`}
 				/>
@@ -61,6 +71,6 @@ export const GeneralInformations = ({ singleChampionInfo }:Props): JSX.Element =
 					{!visibleText && <p>{singleChampionInfo.lore}</p>}
 				</div>
 			</div>
-		</div>
+		</>
 	);
 };

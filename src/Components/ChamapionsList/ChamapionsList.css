@@ -1,54 +1,54 @@
-.Champion__cards__container {
-	max-width: 1600px;
-	padding: 1rem;
-	margin: 0 auto;
-}
-
-.Cards {
-	margin-top: 3rem auto 0 auto;
+.champions-cards-list {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
-	gap: 2rem;
+	padding: 1rem;
+	gap: 1rem;
 }
-.One__card {
-	width: 18%;
+.one-card-container {
+	width: 45%;
 	list-style: none;
+	position: relative;
+	margin-bottom: 1rem;
 }
-.Cards::after {
-	content: "";
-	flex-basis: 18%;
-	flex-grow: 1;
-}
-.Cards > :nth-last-child(-n + 3) {
-	margin-left: auto;
-}
-.OneChamp__card a img {
+.card-img-container a img {
 	width: 100%;
 }
-.notFound {
-	font-size: 3rem;
-	padding: 3rem;
-}
-
-.OneChamp__card {
-	position: relative;
-}
-.OneChamp__card:hover span {
-	background-color: #437987;
-}
-.OneChamp__card span {
+.card-img-container span {
 	position: absolute;
-	color: white;
-	bottom: 0;
 	left: 0;
-	padding: 1rem;
+	bottom: 0;
+	color: white;
 	background-color: rgb(75, 106, 97);
 	width: 100%;
-	text-transform: uppercase;
+	padding-left: 0.3rem;
+	transition: 0.4s;
+	font-size: 1.1rem;
 	font-style: italic;
-	font-weight: bold;
 	letter-spacing: 2px;
-	font-size: 1.3rem;
-	transition: 0.3s;
+}
+.card-img-container:hover span {
+	background-color: #437987;
+}
+.not-found {
+	margin: 0 auto;
+	padding: 0.5rem;
+}
+@media only screen and (min-width: 1024px) {
+	.champions-list-container {
+		max-width: 1600px;
+		padding: 1rem;
+		margin: 0 auto;
+	}
+	.one-card-container {
+		width: 19%;
+		margin-bottom: 3rem;
+	}
+	.card-img-container span {
+		bottom: -5%;
+		font-size: 2rem;
+	}
+	.not-found {
+		font-size: 3rem;
+		padding: 3rem;
+	}
 }

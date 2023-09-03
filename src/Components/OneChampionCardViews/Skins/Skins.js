@@ -48,7 +48,7 @@ export const Skins = ({ singleChampionInfo }) => {
 					className='Skins__slider'
 					style={{
 						backgroundImage: `url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${singleChampionInfo.id}_${singleChampionInfo.skins[currentIndex].num}.jpg)`,
-					}}><span className="Skin__name">{singleChampionInfo.skins[currentIndex].name}</span></div>
+					}}><span className="Skin__name">{singleChampionInfo.skins[currentIndex].name === "default" ? singleChampionInfo.name : singleChampionInfo.skins[currentIndex].name}</span></div>
 				<div className='Slide__thumb'>
 					{singleChampionInfo.skins.map((slide, slideIndex) => {
 						return (

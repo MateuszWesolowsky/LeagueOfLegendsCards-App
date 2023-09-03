@@ -11,30 +11,29 @@ export const ChampionsList = ({ championsInfo, error, isLoading, query }) => {
 	}
 
 	return (
-		<div className='Champion__cards__container'>
-			<ul className='Cards'>
+		<main className='champions-list-container'>
+			<ul className='champions-cards-list'>
 				{championsInfo.length === 0 ? (
-					<p className='notFound'>Champion {query} not found...</p>
+					<p className='not-found'>Champion {query} not found...</p>
 				) : (
 					championsInfo.map((card) => {
 						return (
-							<li key={card.id} className='One__card'>
-								<div className='Champ__img__container'>
-									<div className='OneChamp__card'>
-										<Link to={`/${card.id}`}>
-											<img
-												src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${card.id}_0.jpg`}
-												alt={`Champion - ${card.name}`}
-											/>
-											<span>{card.name}</span>
-										</Link>
-									</div>
+							<li key={card.id} className='one-card-container'>
+								<div className='card-img-container'>
+									<Link to={`/${card.id}`}>
+										<img
+											src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${card.id}_0.jpg`}
+											alt={`Champion - ${card.name}`}
+										/>
+										
+									</Link>
+									<span>{card.name}</span>
 								</div>
 							</li>
 						);
 					})
 				)}
 			</ul>
-		</div>
+		</main>
 	);
 };

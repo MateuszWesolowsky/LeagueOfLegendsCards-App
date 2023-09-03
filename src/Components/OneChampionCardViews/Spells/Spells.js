@@ -18,14 +18,14 @@ export const Spells = ({ singleChampionInfo }) => {
 				<div className='Spells__img__container'>
 					<img
 						onClick={() => chosedSpell(singleChampionInfo.passive.name)}
-						src={`https://ddragon.leagueoflegends.com/cdn/13.12.1/img/passive/${singleChampionInfo.passive.image.full}`}
+						src={`https://ddragon.leagueoflegends.com/cdn/13.17.1/img/passive/${singleChampionInfo.passive.image.full}`}
 						alt={`Passive spell - ${singleChampionInfo.name}`}
 					/>
 					{singleChampionInfo.spells.map((spell) => (
 						<img
 							onClick={() => chosedSpell(spell.name)}
 							key={spell.id}
-							src={`https://ddragon.leagueoflegends.com/cdn/13.12.1/img/spell/${spell.id}.png`}
+							src={`https://ddragon.leagueoflegends.com/cdn/13.17.1/img/spell/${spell.id}.png`}
 							alt={`Passive spell - ${singleChampionInfo.name}`}
 						/>
 					))}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./GeneralInformations.css";
 import { Link } from "react-router-dom";
+import { useScreenDetector } from "../../Hooks/useScreenDetector";
 
 interface Props {
 	singleChampionInfo: {
@@ -20,7 +21,7 @@ export const GeneralInformations = ({
 	singleChampionInfo,
 }: Props): JSX.Element => {
 	const [visibleText, setVisibleText] = useState<boolean>(true);
-console.log(singleChampionInfo)
+	const { isMobile } = useScreenDetector();
 	const checkMore = (): void => {
 		setVisibleText(false);
 	};
@@ -45,23 +46,24 @@ console.log(singleChampionInfo)
 					src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${singleChampionInfo.id}_0.jpg`}
 					alt={`Champion - ${singleChampionInfo.id}`}
 				/>
-				<div className='Champion__title__container'>
+				<div className='champion-title-container'>
 					<span>{singleChampionInfo.title}</span>
 					<h2>{singleChampionInfo.name}</h2>
 				</div>
 			</div>
-			<div className='Champion__description__container'>
-				<div className='Left__info__container'>
-					<div className='Role__container'>
+			<div className='champion-description-container'>
+				<div className='left-container'>
+					<div className='role'>
 						<span>Rola</span>
 						<span>{singleChampionInfo.tags[0]}</span>
 					</div>
-					<div className='Difficulty__level__container'>
+					{isMobile && <span className="border"></span>}
+					<div className='level'>
 						<span>Poziom trudności</span>
 						<span>{singleChampionInfo.info.difficulty}</span>
 					</div>
 				</div>
-				<div className='Right__info__container'>
+				<div className='right-container'>
 					{visibleText && (
 						<p>
 							{singleChampionInfo.blurb}

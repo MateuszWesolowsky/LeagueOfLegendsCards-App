@@ -1,4 +1,5 @@
-![image](https://github.com/MateuszWesolowsky/LeagueOfLegendsCards-App/assets/103283398/ae63e834-aa49-466d-8c00-1923f064a35b)
+![image](https://github.com/MateuszWesolowsky/LeagueOfLegendsCards-App/assets/103283398/fc8ee840-f39f-4351-b0f3-c79cee6b7437)
+
 
 About the project:
 
@@ -9,12 +10,12 @@ Build with:
 » CSS
 » RIOT GAMES API
 
-HOME PAGE🏠
+                                                  HOME PAGE🏠
 ![image](https://github.com/MateuszWesolowsky/LeagueOfLegendsCards-App/assets/103283398/a9ce6e4b-ae88-4bf1-82cb-8e3c42b278c8)
 ![image](https://github.com/MateuszWesolowsky/LeagueOfLegendsCards-App/assets/103283398/4f546484-5869-4b47-bc30-c31edb46a26b)
 
 
-CHAMPION VIEW
+                                                  CHAMPION VIEW 🐱‍🏍
 
 
 ![image](https://github.com/MateuszWesolowsky/LeagueOfLegendsCards-App/assets/103283398/7ea4aec3-2863-4a23-a855-af2ca3a4d556)

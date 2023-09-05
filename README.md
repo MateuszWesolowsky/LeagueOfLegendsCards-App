@@ -1,3 +1,22 @@
+
+![image](https://github.com/MateuszWesolowsky/LeagueOfLegendsCards-App/assets/103283398/a9ce6e4b-ae88-4bf1-82cb-8e3c42b278c8)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

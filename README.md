@@ -3,11 +3,11 @@
 </p>
 
 
-About the project:
+<h2>About the project:</h2>
 
 League of legends app is a project that will help you learn basic information about the heroes of league of legends. Information are fetched using an external API from RIOT GAMES.
 
-Build with:<br/>
+<h2>Build with:</h2><br/>
 » React JS<br/>
 » TypeScript<br/>
 » CSS<br/>

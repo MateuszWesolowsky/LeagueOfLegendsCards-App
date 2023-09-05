@@ -13,6 +13,7 @@ Build with:<br/>
 » CSS<br/>
 » RIOT GAMES API<br/>
 
+<h2>Screenshots of the Project 📸</h2>
 
 <p align="center">
 HOME PAGE🏠

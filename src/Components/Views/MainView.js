@@ -26,7 +26,7 @@ export const MainView = () => {
 	);
 
 	filteredChampions = filteredChampions.filter((champion) =>
-		champion.id.toLowerCase().includes(query)
+		champion.id.toLowerCase().includes(query.toLocaleLowerCase())
 	);
 
 	filteredChampions = filteredChampions.filter((champion) => {

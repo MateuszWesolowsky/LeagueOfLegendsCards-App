@@ -1,8 +1,11 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import { useScreenDetector } from "../../Hooks/useScreenDetector";
 import "./Skins.css";
 
 export const Skins = ({ singleChampionInfo }) => {
 	const [currentIndex, setCurrentIndex] = useState(0);
+	const { isDesktop } = useScreenDetector();
+
 	const timeRef = useRef(null);
 
 	const goToNext = useCallback(() => {
@@ -35,30 +38,41 @@ export const Skins = ({ singleChampionInfo }) => {
 	};
 
 	return (
-		<div className='Skins__container'>
+		<div className='skins-container'>
 			<h2>Dostępne skórki</h2>
-			<div className='Slider__container'>
-				<div className='Left__arrow__slide' onClick={goToPrev}>
+			<div className='skins-slider-container'>
+				<div className='left-arrow' onClick={goToPrev}>
 					⇦
 				</div>
-				<div className='Right__arrow__slide' onClick={goToNext}>
+				<div className='right-arrow' onClick={goToNext}>
 					⇨
 				</div>
 				<div
-					className='Skins__slider'
+					className='skins-slider'
 					style={{
 						backgroundImage: `url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${singleChampionInfo.id}_${singleChampionInfo.skins[currentIndex].num}.jpg)`,
-					}}><span className="Skin__name">{singleChampionInfo.skins[currentIndex].name === "default" ? singleChampionInfo.name : singleChampionInfo.skins[currentIndex].name}</span></div>
-				<div className='Slide__thumb'>
+					}}>
+					<span className='skin-name'>
+						{singleChampionInfo.skins[currentIndex].name === "default"
+							? singleChampionInfo.name
+							: singleChampionInfo.skins[currentIndex].name}
+					</span>
+				</div>
+			</div>
+			{isDesktop && (
+				<div className='slider-thumbs'>
 					{singleChampionInfo.skins.map((slide, slideIndex) => {
 						return (
 							<div key={slideIndex} onClick={() => goToSlide(slideIndex)}>
-								<img src={`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${singleChampionInfo.id}_${slide.num}.jpg`} alt="" />
+								<img className={`${slideIndex === currentIndex ? "shadow-img" : ""}`}
+									src={`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${singleChampionInfo.id}_${slide.num}.jpg`}
+									alt=''
+								/>
 							</div>
 						);
 					})}
 				</div>
-			</div>
+			)}
 		</div>
 	);
 };

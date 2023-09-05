@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Spinner } from "../Spinner/Spinner";
 import { GeneralInformations } from "../OneChampionCardViews/GeneralInformations/GeneralInformations.tsx";
@@ -14,6 +14,13 @@ export const SingleChampionView = () => {
 	const { championsInfo, error, isLoading } = useFetchChampions(API);
 
 	let championData = championsInfo[0];
+
+	useEffect(() => {
+		document.title = `Champion | ${championId}`;
+		return () => {
+			document.title = "League of Legends App";
+		};
+	}, [championId]);
 
 	if (error) {
 		return <p>{error}</p>;

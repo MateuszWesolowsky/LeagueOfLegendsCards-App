@@ -56,7 +56,7 @@ export const Navigation = ({
 						value={selectedCategory}
 						onChange={(e) => onSelectCategory(e.target.value)}>
 						{data.map((el) => (
-							<option value={el.key}>{el.name}</option>
+							<option key={el.key} value={el.key}>{el.name}</option>
 						))}
 					</select>
 				)}

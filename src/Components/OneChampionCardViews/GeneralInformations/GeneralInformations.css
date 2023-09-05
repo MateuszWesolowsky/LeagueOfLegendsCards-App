@@ -8,7 +8,7 @@
 	height: 50vh;
 }
 
-.imgs-container .main-img {
+.main-img {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -17,20 +17,42 @@
 	height: 50%;
 }
 
+.champion-title-container {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	padding: 0.2rem;
+	letter-spacing: 2px;
+}
+.champion-title-container h2 {
+	letter-spacing: 5px;
+	font-style: italic;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.left-container {
+	display: flex;
+	justify-content: space-around;
+	padding: 1rem;
+}
+.role,
+.level {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 40%;
+}
+.border {
+	width: 2px;
+	background-color: rgba(19, 216, 246, 0.4);
+	height: auto;
+}
+.right-container {
+	padding: 0.4rem;
+	font-size: 0.8rem;
+	text-align: center;
+}
 
 
 
@@ -110,6 +132,103 @@
 	transition: 1s;
 	transition-delay: 0.75s;
 }
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1024px) {
+	.back-btn {
+		font-size: 2rem;
+		top: 5%;
+	}
+	.blur-img {
+		width: 100%;
+		height: 100vh;
+	}
+	.main-img {
+		top: 50%;
+		width: 70%;
+		height: 80%;
+	}
+	.champion-title-container {
+		bottom: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		font-style: italic;
+	}
+	.champion-title-container span {
+		font-size: 2.2rem;
+	}
+	.champion-title-container h2 {
+		font-size: 7rem;
+		padding: 0 1rem;
+		letter-spacing: 1.2rem;
+	}
+	.champion-description-container {
+		margin: 0 auto;
+		font-size: 0.8rem;
+		width: 70%;
+		padding: 2rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.champion-description-container > div {
+		width: 35%;
+	}
+	.left-container {
+		padding: 0.5rem;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.right-container {
+		position: relative;
+		font-size: 1rem;
+	}
+	.right-container::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: -50%;
+		background-color: #ffffcb;
+		width: 1px;
+		height: 100%;
+	}
+	.role, .level {
+		align-items: center;
+		font-size: 1.2rem;
+	}
+
+	.level span,
+	.role span {
+		padding: 0.4rem;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

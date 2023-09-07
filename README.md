@@ -13,6 +13,8 @@ League of legends app is a project that will help you learn basic information ab
 » CSS<br/>
 » RIOT GAMES API<br/>
 
+Live - https://league-champions-app.netlify.app/
+
 <h2>Screenshots of the Project 📸</h2>
 
 <p align="center">

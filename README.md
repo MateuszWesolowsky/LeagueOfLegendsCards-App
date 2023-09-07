@@ -28,7 +28,7 @@ HOME PAGE🏠
 CHAMPION VIEW 🐱‍🏍
 </p>
 
-![image](https://github.com/MateuszWesolowsky/LeagueOfLegendsCards-App/assets/103283398/7ea4aec3-2863-4a23-a855-af2ca3a4d556)
+![image](https://github.com/MateuszWesolowsky/LeagueOfLegendsCards-App/assets/103283398/72160182-2939-4267-a0e4-a7efd5082e09)
 ![image](https://github.com/MateuszWesolowsky/LeagueOfLegendsCards-App/assets/103283398/9da0af02-798b-449a-a755-ac47e481e87a)
 ![image](https://github.com/MateuszWesolowsky/LeagueOfLegendsCards-App/assets/103283398/037475ba-54f3-43de-a561-212644907960)
 

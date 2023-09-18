@@ -1,7 +1,7 @@
 import React from "react";
 import { Spinner } from "../Spinner/Spinner";
 import { Link } from "react-router-dom";
-import "./ChampionsList.css";
+import "../ChamapionsList/ChamapionsList.css";
 
 interface ChampionInfo {
   id: string;

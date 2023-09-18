@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { ChampionsList } from "../ChamapionsList/ChampionsList";
+import { ChampionsList } from "../ChamapionsList/ChampionsList.tsx";
 import { Navigation } from "../Navigation/Navigation.tsx";
-import { Header } from "../Header/Header";
+import { Header } from "../Header/Header.tsx";
 import { useFetchChampions } from "../Hooks/useFetchChampions";
 
 const API_URL =

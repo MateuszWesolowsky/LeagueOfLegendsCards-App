@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Spinner } from "../Spinner/Spinner";
 import { GeneralInformations } from "../OneChampionCardViews/GeneralInformations/GeneralInformations.tsx";
-import { Spells } from "../OneChampionCardViews/Spells/Spells";
+import { Spells } from "../OneChampionCardViews/Spells/Spells.tsx";
 import { Skins } from "../OneChampionCardViews/Skins/Skins";
 import { useFetchChampions } from "../Hooks/useFetchChampions";
 

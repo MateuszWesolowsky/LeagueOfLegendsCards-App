@@ -57,7 +57,7 @@ export const GeneralInformations = ({
 						<span>Rola</span>
 						<span>{singleChampionInfo.tags[0]}</span>
 					</div>
-					{isMobile && <span className="border"></span>}
+					{isMobile && <span className='border'></span>}
 					<div className='level'>
 						<span>Poziom trudności</span>
 						<span>{singleChampionInfo.info.difficulty}</span>

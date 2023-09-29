@@ -13,8 +13,9 @@
 	color: #ffffe6;
 	border: 1px solid grey;
 }
-.nav-champions-list select, .nav-champions-level select{
-	background-color:  rgb(39, 38, 38);
+.nav-champions-list select,
+.nav-champions-level select {
+	background-color: rgb(39, 38, 38);
 	color: #ffffe6;
 	text-align: center;
 }
@@ -41,7 +42,8 @@
 				grey 12px,
 				transparent 12px
 			);
-		background-position: top right, top right, bottom left, bottom left, top left;
+		background-position: top right, top right, bottom left, bottom left,
+			top left;
 		background-size: calc(100% - 15px) 2px, 2px 100%, 100% 2px,
 			2px calc(100% - 15px), 15px 15px;
 		background-repeat: no-repeat;
@@ -53,7 +55,7 @@
 		width: 100%;
 		height: 100%;
 	}
-	
+
 	.nav-champions-list li {
 		list-style: none;
 		padding: 2px;
@@ -84,9 +86,8 @@
 	}
 	.nav-container input {
 		padding: 0.3rem;
-
 	}
-	 .nav-champions-level select{
+	.nav-champions-level select {
 		padding: 0.3rem;
 	}
 }

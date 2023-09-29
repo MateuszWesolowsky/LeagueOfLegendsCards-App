@@ -1,18 +1,18 @@
 .spells-container {
-    text-align: center;
-    padding: 0.4rem;
+	text-align: center;
+	padding: 0.4rem;
 }
 .spells-container h2 {
-    padding: 1rem;
+	padding: 1rem;
 }
-.spells-img{
-    display: flex;
-    justify-content: space-around;
+.spells-img {
+	display: flex;
+	justify-content: space-around;
 }
 .spells-description-container {
-    display: flex;
-    flex-direction: column;
-    font-size: 0.8rem;
+	display: flex;
+	flex-direction: column;
+	font-size: 0.8rem;
 }
 
 .shadow-img {
@@ -23,26 +23,26 @@
 	h2 {
 		font-size: 5rem;
 	}
-    .spells-img {
+	.spells-img {
 		justify-content: center;
 		gap: 2rem;
 		padding: 2rem;
 	}
-    .spells-img img {
+	.spells-img img {
 		cursor: pointer;
 		transition: transform 0.3s ease;
 	}
-    .spells-img img:hover {
+	.spells-img img:hover {
 		transform: translateY(-20%);
 	}
-    .spells-description-container {
+	.spells-description-container {
 		margin: 0 auto;
 		width: 50%;
 	}
-    .spell-name {
+	.spell-name {
 		font-size: 2.5rem;
 	}
-    .spell-description {
+	.spell-description {
 		padding: 2rem;
 		text-transform: none;
 		font-size: 1rem;

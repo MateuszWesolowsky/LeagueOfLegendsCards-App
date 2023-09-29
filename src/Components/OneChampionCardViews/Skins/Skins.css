@@ -1,7 +1,7 @@
 .skins-container {
 	text-align: center;
 	padding: 0.4rem;
-    margin: 0 auto;
+	margin: 0 auto;
 }
 .skins-container h2 {
 	padding: 1rem;
@@ -53,19 +53,17 @@
 	box-shadow: 0 0 10px #13d8f6, 0 0 10px rgb(33, 150, 243), 0 0 30px #13d8f6;
 }
 
-
-
 @media only screen and (min-width: 1024px) {
-    .skins-slider-container {
-        padding: 2rem;
-    }
-    .skins-container {
+	.skins-slider-container {
+		padding: 2rem;
+	}
+	.skins-container {
 		width: 70%;
 		height: 70vh;
 		margin: 0 auto;
 		position: relative;
 	}
-    .skins-container h2 {
+	.skins-container h2 {
 		text-align: center;
 		padding: 1rem;
 		font-size: 4rem;
@@ -83,11 +81,11 @@
 		top: 10%;
 		font-size: 2rem;
 	}
-    .left-arrow,
-    .right-arrow {
-        font-size: 3rem;
-    }
-    .slider-thumbs {
+	.left-arrow,
+	.right-arrow {
+		font-size: 3rem;
+	}
+	.slider-thumbs {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;

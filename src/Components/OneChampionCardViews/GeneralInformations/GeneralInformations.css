@@ -54,9 +54,6 @@
 	text-align: center;
 }
 
-
-
-
 .back-btn {
 	cursor: pointer;
 	position: absolute;
@@ -133,13 +130,6 @@
 	transition-delay: 0.75s;
 }
 
-
-
-
-
-
-
-
 @media only screen and (min-width: 1024px) {
 	.back-btn {
 		font-size: 2rem;
@@ -200,7 +190,8 @@
 		width: 1px;
 		height: 100%;
 	}
-	.role, .level {
+	.role,
+	.level {
 		align-items: center;
 		font-size: 1.2rem;
 	}
@@ -210,26 +201,3 @@
 		padding: 0.4rem;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

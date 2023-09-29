@@ -2,11 +2,22 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import { useScreenDetector } from "../../Hooks/useScreenDetector";
 import "./Skins.css";
 
-export const Skins = ({ singleChampionInfo }) => {
-	const [currentIndex, setCurrentIndex] = useState(0);
+interface SkinsProps {
+	singleChampionInfo: {
+		id: string;
+		name: string;
+		skins: {
+			num: number;
+			name: string;
+		}[];
+	};
+}
+
+export const Skins: React.FC<SkinsProps> = ({ singleChampionInfo }) => {
+	const [currentIndex, setCurrentIndex] = useState<number>(0);
 	const { isDesktop } = useScreenDetector();
 
-	const timeRef = useRef(null);
+	const timeRef = useRef<NodeJS.Timeout | null>(null);
 
 	const goToNext = useCallback(() => {
 		const isLastSlide = currentIndex === singleChampionInfo.skins.length - 1;
@@ -14,7 +25,7 @@ export const Skins = ({ singleChampionInfo }) => {
 		setCurrentIndex(newIndex);
 	}, [currentIndex, singleChampionInfo.skins]);
 
-	const goToSlide = (slideIndex) => {
+	const goToSlide = (slideIndex: number) => {
 		setCurrentIndex(slideIndex);
 	};
 
@@ -26,7 +37,11 @@ export const Skins = ({ singleChampionInfo }) => {
 			goToNext();
 		}, 3000);
 
-		return () => clearTimeout(timeRef.current);
+		return () => {
+			if (timeRef.current) {
+				clearTimeout(timeRef.current);
+			}
+		};
 	}, [goToNext]);
 
 	const goToPrev = () => {
@@ -64,7 +79,10 @@ export const Skins = ({ singleChampionInfo }) => {
 					{singleChampionInfo.skins.map((slide, slideIndex) => {
 						return (
 							<div key={slideIndex} onClick={() => goToSlide(slideIndex)}>
-								<img className={`${slideIndex === currentIndex ? "shadow-img" : ""}`}
+								<img
+									className={`${
+										slideIndex === currentIndex ? "shadow-img" : ""
+									}`}
 									src={`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${singleChampionInfo.id}_${slide.num}.jpg`}
 									alt=''
 								/>

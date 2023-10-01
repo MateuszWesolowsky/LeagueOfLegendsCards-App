@@ -41,7 +41,7 @@ export const Header: React.FC = () => {
 				</div>
 			</div>
 			<div className='title' ref={sectionRef}>
-				<h1>
+				<h1 data-testid="header-title">
 					Wybierz swojego <span>Bohatera</span>
 				</h1>
 				<p>

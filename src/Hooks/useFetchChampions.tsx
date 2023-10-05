@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import ChampionInfo from "../../types/type";
+import ChampionInfo from "../types/type";
 
 export const useFetchChampions = (link: string) => {
 	const [championsInfo, setChampionsInfo] = useState<ChampionInfo[]>([]);

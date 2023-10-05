@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Spinner } from "../Spinner/Spinner";
-import { GeneralInformations } from "../OneChampionCardViews/GeneralInformations/GeneralInformations";
-import { Spells } from "../OneChampionCardViews/Spells/Spells";
-import { Skins } from "../OneChampionCardViews/Skins/Skins";
+import { Spinner } from "../Components/Spinner/Spinner";
+import { GeneralInformations } from "../Components/OneChampionCardViews/GeneralInformations/GeneralInformations";
+import { Spells } from "../Components/OneChampionCardViews/Spells/Spells";
+import { Skins } from "../Components/OneChampionCardViews/Skins/Skins";
 import { useFetchChampions } from "../Hooks/useFetchChampions";
-import ChampionInfo from "../../types/type";
+import ChampionInfo from "../types/type";
 
 export const SingleChampionView: React.FC = () => {
 	const { championId } = useParams<{ championId: string }>();

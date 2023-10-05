@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Navigation } from "../Navigation/Navigation";
-import { Header } from "../Header/Header";
-import { ChampionsList } from "../ChamapionsList/ChampionsList";
+import { Navigation } from "../Components/Navigation/Navigation";
+import { Header } from "../Components/Header/Header";
+import { ChampionsList } from "../Components/ChamapionsList/ChampionsList";
 import { useFetchChampions } from "../Hooks/useFetchChampions";
-import ChampionInfo from "../../types/type";
+import ChampionInfo from "../types/type";
 
 const API_URL =
 	"https://ddragon.leagueoflegends.com/cdn/13.17.1/data/pl_PL/champion.json";

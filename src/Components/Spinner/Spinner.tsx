@@ -6,5 +6,5 @@ interface SpinnerProps {
 }
 
 export const Spinner: React.FC<SpinnerProps> = ({ className }) => {
-	return <div className={className}></div>;
+	return <div data-testid="loader-test" className={className}></div>;
 };

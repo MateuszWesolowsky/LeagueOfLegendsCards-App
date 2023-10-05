@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import { useScreenDetector } from "../../Hooks/useScreenDetector";
+import { useScreenDetector } from "../../../Hooks/useScreenDetector";
 import "./Skins.css";
 
 interface SkinsProps {

@@ -1,7 +1,6 @@
-import React from "react";
 import "./Nav.css";
 import { data } from "./data";
-import { useScreenDetector } from "../Hooks/useScreenDetector";
+import { useScreenDetector } from "../../Hooks/useScreenDetector";
 
 interface Props {
 	onSelectCategory(el: string): void;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./GeneralInformations.css";
 import { Link } from "react-router-dom";
-import { useScreenDetector } from "../../Hooks/useScreenDetector";
+import { useScreenDetector } from "../../../Hooks/useScreenDetector";
 
 interface Props {
 	singleChampionInfo: {

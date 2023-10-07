@@ -1,24 +1,15 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import "./GeneralInformations.css";
 import { Link } from "react-router-dom";
 import { useScreenDetector } from "../../../Hooks/useScreenDetector";
+import ChampionInfo from "../../../types/type";
 
 interface Props {
-	singleChampionInfo: {
-		id: string;
-		title: string;
-		name: string;
-		tags: string[];
-		info: {
-			difficulty: number;
-		};
-		blurb: string;
-		lore: string;
-	};
+	singleChampionInfo: ChampionInfo;
 }
 
 export const GeneralInformations = ({
-	singleChampionInfo,
+	singleChampionInfo
 }: Props): JSX.Element => {
 	const [visibleText, setVisibleText] = useState<boolean>(true);
 	const { isMobile } = useScreenDetector();

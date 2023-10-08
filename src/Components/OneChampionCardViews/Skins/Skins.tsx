@@ -84,7 +84,7 @@ export const Skins: React.FC<SkinsProps> = ({ singleChampionInfo }) => {
 										slideIndex === currentIndex ? "shadow-img" : ""
 									}`}
 									src={`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${singleChampionInfo.id}_${slide.num}.jpg`}
-									alt=''
+									alt='thumbnail'
 								/>
 							</div>
 						);

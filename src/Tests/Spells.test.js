@@ -6,7 +6,6 @@ const mockChampionInfo = {
 	name: "Test Champion",
 	passive: {
 		name: "Test Passive",
-		description: "Test Passive Description",
 		image: {
 			full: "test-passive-image.png",
 		},
@@ -29,7 +28,6 @@ describe("Spells component", () => {
 
 		expect(screen.getByText("Umiejętności")).toBeInTheDocument();
 	});
-
 	test("clicking on a spell changes the active spell", () => {
 		render(<Spells singleChampionInfo={mockChampionInfo} />);
 
@@ -37,12 +35,13 @@ describe("Spells component", () => {
 			"shadow-img"
 		);
 	});
-	test("changes active spell when a spell image is clicked", async () => {
+	test("changes active spell when a spell image is clicked", () => {
 		render(<Spells singleChampionInfo={mockChampionInfo} />);
 
-		const spell2Image = screen.getByAltText("Spell 1 - Test Champion");
-		fireEvent.click(spell2Image);
+		const spell1Image = screen.getByTestId("spell-1");
+		console.log(spell1Image);
+		fireEvent.click(spell1Image);
 
-		expect(spell2Image).toHaveClass("shadow-img");
+		expect(spell1Image).toHaveClass("shadow-img");
 	});
 });

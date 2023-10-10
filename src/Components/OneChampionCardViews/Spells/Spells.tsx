@@ -28,8 +28,9 @@ export const Spells: React.FC<SpellsProps> = ({ singleChampionInfo }) => {
 					src={`https://ddragon.leagueoflegends.com/cdn/13.17.1/img/passive/${singleChampionInfo.passive.image.full}`}
 					alt={`Passive spell - ${singleChampionInfo.name}`}
 				/>
-				{singleChampionInfo.spells.map((spell) => (
+				{singleChampionInfo.spells.map((spell, i) => (
 					<img
+						data-testid={`spell-${i}`}
 						className={`${activeSpellName === spell.name ? "shadow-img" : ""}`}
 						onClick={() => chooseSpell(spell.name)}
 						key={spell.id}

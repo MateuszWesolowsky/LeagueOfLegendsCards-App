@@ -12,7 +12,13 @@ export const useFetchChampions = (link: string) => {
 				setIsLoading(true);
 				setError("");
 				const res = await fetch(link);
+				if (!res.ok) {
+					throw new Error('Network response was not ok');
+				  }
 				const data = await res.json();
+				if (!data.data) {
+					throw new Error('No data available');
+				  }
 				setChampionsInfo(Object.values(data.data) as ChampionInfo[]);
 			} catch (e) {
 				setError("Wystąpił błąd podczas ładowania danych..");

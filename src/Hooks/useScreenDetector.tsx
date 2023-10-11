@@ -16,7 +16,7 @@ export const useScreenDetector = () => {
 	}, []);
 
 	const isMobile: boolean = width <= 768;
-	const isTablet: boolean = width <= 1024;
+	const isTablet: boolean = width > 768 && width <= 1024;
 	const isDesktop: boolean = width > 1024;
 
 	return { isMobile, isTablet, isDesktop };

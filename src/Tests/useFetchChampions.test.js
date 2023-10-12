@@ -16,14 +16,5 @@ describe("useFetchChampions Hook", () => {
 
 		expect(result.current.isLoading).toBe(true);
 	});
-	// it("should set an error message when network response is not ok", async () => {
-	// 	const link = "https://example.com/nonexistent"; // Assuming this URL will result in a non-ok response
-	// 	const { result, waitForNextUpdate } = renderHook(() =>
-	// 		useFetchChampions(link)
-	// 	);
 
-	// 	await waitForNextUpdate;
-
-	// 	expect(result.current.error).toBe("Network response was not ok");
-	// });
 });

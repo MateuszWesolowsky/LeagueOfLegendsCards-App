@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import "./Header.css";
+import myVideo from "../../utils/video/leagueFilm.mp4";
 
 export const Header: React.FC = () => {
 	const sectionRef = useRef<HTMLDivElement | null>(null);
@@ -13,13 +14,7 @@ export const Header: React.FC = () => {
 	return (
 		<header>
 			<div className='header-container'>
-				<video
-					src='https://www.leagueoflegends.com/static/what-is-league-of-legends-4e3d9714805dc82373c3a069ed9ec103.mp4'
-					muted
-					loop
-					playsInline
-					autoPlay></video>
-
+				<video src={myVideo} muted loop playsInline autoPlay></video>
 				<div className='game-description'>
 					<h2>CZYM JEST LEAGUE OF LEGENDS?</h2>
 					<span>
@@ -41,7 +36,7 @@ export const Header: React.FC = () => {
 				</div>
 			</div>
 			<div className='title' ref={sectionRef}>
-				<h1 data-testid="header-title">
+				<h1 data-testid='header-title'>
 					Wybierz swojego <span>Bohatera</span>
 				</h1>
 				<p>
